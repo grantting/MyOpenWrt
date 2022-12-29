@@ -107,7 +107,7 @@ jobs:
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 || make -j1 V=s || (curl -k https://api.day.app/${{ env.BARK_TOKEN }}/编译hanwckf固件失败;exit 1)
+        make -j$(nproc) || make -j1 || make -j1 V=s || (curl -k https://api.day.app/${{ env.BARK_TOKEN }}/编译固件失败;exit 1)
         echo "status=success" >> $GITHUB_OUTPUT
     - name: 检查可用容量
       if: (!cancelled())
@@ -137,8 +137,8 @@ jobs:
       run: |
         time=$(date +%Y-%m-%d)
         Rtime=$(date +%Y-%m-%d-%H-%M)
-        release_tag="ax6000-hanwckf-$Rtime"
-        release_name="ax6000-hanwckf-$Rtime"
+        release_tag="360-t7-$Rtime"
+        release_name="360-t7-$Rtime"
         echo "默认网关：192.168.10.1
         默认密码：password" >> release.txt
         echo "release_name=$release_name" >> $GITHUB_OUTPUT
