@@ -16,3 +16,8 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+echo 'src-git packages https://git.openwrt.org/feed/packages' >>feed.conf.default
+echo 'src-git luci https://git.openwrt.org/project/luci' >>feeds.conf.default
+echo 'src-git routing https://git.openwrt.org/feed/routing' >>feeds.conf.default
+echo 'src-git kiddin9 https://github.com/kiddin9/openwrt-packages' >>feeds.conf.default
