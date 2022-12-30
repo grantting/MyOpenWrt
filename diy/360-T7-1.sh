@@ -19,3 +19,4 @@
 
 # 添加插件源码
 sed -i '$a src-git-full kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git-full libfido2 https://github.com/Yubico/libfido2' feeds.conf.default
